@@ -8,52 +8,18 @@
 		
 		<ul class="teams-grid">
 			
-			<li>
-				<article class="team-card">
-					<a href="#"><img src="templates/assets/img/angry-owls.png" alt="Logo de l'équipe Angry Owls, tête de hibou violet stylisé sur fond violet"></a>
-					<h3 class="team-name">angry owls</h3>
-					<p class="team-desc">A team of angry owls</p>
-					<a class="btn" href="#">découvrez angry owls</a>
-				</article>
-			</li>
-			
-			<li>
-				<article class="team-card">
-					<a href="#"><img src="templates/assets/img/chatty-parrots.png" alt="Logo de l'équipe Chatty Parrots, perroquet stylisé avec des couleurs rouges et bleues"></a>
-					<h3 class="team-name">chatty parrots</h3>
-					<p class="team-desc">A team of chatty parrots</p>
-					<a class="btn" href="#">découvrez chatty parrots</a>
-				</article>
-			</li>
-			
-			<li>
-				<article class="team-card">
-					<a href="#"><img src="templates/assets/img/panthers.png" alt="Logo de l'équipe Panthers, tête de panthère noire et bleue stylisée"></a>
-					<h3 class="team-name">panthers</h3>
-					<p class="team-desc">A team of panthers</p>
-					<a class="btn" href="#">découvrez panthers</a>
-				</article>
-			</li>
-			
-			<li>
-				<article class="team-card">
-					<a href="#"><img src="templates/assets/img/sparrow.png" alt="Logo de l'équipe Sparrow, oiseau bleu stylisé de profil"></a>
-					<h3 class="team-name">sparrow</h3>
-					<p class="team-desc">A team of sparrow</p>
-					<a class="btn" href="#">découvrez sparrow</a>
-				</article>
-			</li>
-			
-			<li>
-				<article class="team-card">
-					<a href="#"><img src="templates/assets/img/vendetta.png" alt="Logo de l'équipe Vendetta, lettre V stylisée entourée d’un cercle lumineux bleu"></a>
-					<h3 class="team-name">vendetta</h3>
-					<p class="team-desc">A team of vendetta</p>
-					<a class="btn" href="#">découvrez vendetta</a>
-				</article>
-			</li>
-			
-		</ul>
+			<ul class="teams-grid">
+			    {% for team in teams %}
+			        <li>
+			            <article class="team-card">
+			                <a href="{{ team.link }}"><img src="templates/assets/img/{{ team.img }}" alt="{{ team.alt }}"></a>
+			                <h3 class="team-name">{{ team.name }}</h3>
+			                <p class="team-desc">{{ team.desc }}</p>
+			                <a class="btn" href="{{ team.link }}">découvrez {{ team.name }}</a>
+			            </article>
+			        </li>
+			    {% endfor %}
+			</ul>
 	</section>
 </main>
 
