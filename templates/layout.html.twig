@@ -3,9 +3,23 @@
     <head>
         <meta charset="utf-8" />
         <title> Exercice Twig </title>
+        <link rel="stylesheet" href="assets/styles/css/normalize.css">
         <link rel="stylesheet" href="assets/styles/css/style.css">
     </head>
     <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">les teams</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">les players</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">les matchs</a></li>
+                </ul>
+            </nav>
+        </header>
         {% block content %}
         {% endblock %}
     </body>
